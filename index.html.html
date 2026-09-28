@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Best car rental service in Navi Mumbai. Swift, Ertiga, Dzire, Innova available for airport pickup, Mumbai local, outstation, Mumbai Darshan, Maharashtra tourism. Book now!">
+<meta name="keywords" content="car rental Navi Mumbai, cab Navi Mumbai, airport pickup Navi Mumbai, Mumbai Darshan, outstation car rental, Ertiga rental, Swift rental, tempo traveller Navi Mumbai, 407 pickup Navi Mumbai, Maharashtra tour package">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Navi Mumbai Car Rentals – Book Cabs & Tempo Traveller Online">
+<meta property="og:description" content="Affordable & reliable car rental in Navi Mumbai. Airport pickup, Mumbai local, outstation, Maharashtra tours. Cars & tempo available 24/7.">
+<meta property="og:type" content="website">
+<title>Navi Mumbai Car Rentals | Swift, Ertiga, Dzire, Tempo – Book Online</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #1a6fc4;
+  --primary-light: #e8f1fb;
+  --accent: #f59e0b;
+  --accent-light: #fef3c7;
+  --text-dark: #1e293b;
+  --text-mid: #475569;
+  --text-light: #94a3b8;
+  --bg-white: #ffffff;
+  --bg-soft: #f8fafc;
+  --bg-blue: #eef4fd;
+  --border: #e2e8f0;
+  --success: #10b981;
+  --shadow-sm: 0 2px 12px rgba(26,111,196,0.07);
+  --shadow-md: 0 8px 30px rgba(26,111,196,0.12);
+  --radius: 14px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; color: var(--text-dark); background: var(--bg-white); }
+h1,h2,h3,h4 { font-family: 'Poppins', sans-serif; }
+
+/* NAVBAR */
+.navbar { background: var(--bg-white); border-bottom: 1px solid var(--border); padding: 12px 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow-sm); }
+.navbar-brand { font-weight: 700; font-size: 1.3rem; color: var(--primary) !important; }
+.navbar-brand span { color: var(--accent); }
+.nav-link { color: var(--text-mid) !important; font-weight: 500; font-size: 0.9rem; padding: 6px 14px !important; transition: color 0.2s; }
+.nav-link:hover { color: var(--primary) !important; }
+.btn-book-nav { background: var(--primary); color: #fff !important; border-radius: 50px; padding: 8px 22px !important; font-weight: 600; font-size: 0.85rem; }
+.btn-book-nav:hover { background: #1558a0; }
+.navbar-toggler { border: 1px solid var(--border); }
+
+/* HERO */
+.hero { background: linear-gradient(135deg, #eef4fd 0%, #f8fafc 50%, #fff7ed 100%); padding: 80px 0 60px; min-height: 88vh; display: flex; align-items: center; }
+.hero-badge { background: var(--accent-light); color: #92400e; font-size: 0.78rem; font-weight: 600; padding: 6px 16px; border-radius: 50px; display: inline-block; margin-bottom: 18px; letter-spacing: 0.5px; }
+.hero h1 { font-size: 2.6rem; font-weight: 700; line-height: 1.25; color: var(--text-dark); margin-bottom: 16px; }
+.hero h1 span { color: var(--primary); }
+.hero p { color: var(--text-mid); font-size: 1.05rem; line-height: 1.7; margin-bottom: 28px; }
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary-main { background: var(--primary); color: #fff; border: none; border-radius: 50px; padding: 13px 32px; font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
+.btn-primary-main:hover { background: #1558a0; color: #fff; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(26,111,196,0.3); }
+.btn-whatsapp { background: #25d366; color: #fff; border: none; border-radius: 50px; padding: 13px 32px; font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
+.btn-whatsapp:hover { background: #1db954; color: #fff; transform: translateY(-1px); }
+.hero-stats { display: flex; gap: 28px; margin-top: 36px; flex-wrap: wrap; }
+.hero-stat { text-align: center; }
+.hero-stat .num { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+.hero-stat .lbl { font-size: 0.75rem; color: var(--text-light); font-weight: 500; }
+.hero-img-wrap { position: relative; }
+.hero-car-card { background: var(--bg-white); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-md); border: 1px solid var(--border); }
+.hero-car-card img { width: 100%; border-radius: 10px; }
+.floating-badge { position: absolute; background: var(--bg-white); border-radius: 12px; padding: 10px 16px; box-shadow: var(--shadow-md); border: 1px solid var(--border); font-size: 0.8rem; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.floating-badge.top-left { top: -14px; left: -14px; }
+.floating-badge.bottom-right { bottom: -14px; right: -14px; }
+.floating-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--success); }
+
+/* BOOKING FORM */
+.booking-section { background: var(--bg-white); padding: 0; margin-top: -30px; position: relative; z-index: 10; }
+.booking-card { background: var(--bg-white); border-radius: var(--radius); box-shadow: 0 10px 40px rgba(26,111,196,0.15); border: 1px solid var(--border); padding: 32px 36px; }
+.booking-card h3 { color: var(--text-dark); font-weight: 700; font-size: 1.2rem; margin-bottom: 24px; }
+.booking-card h3 span { color: var(--primary); }
+.form-label { font-size: 0.82rem; font-weight: 600; color: var(--text-mid); margin-bottom: 6px; }
+.form-control, .form-select { border: 1.5px solid var(--border); border-radius: 10px; padding: 10px 14px; font-size: 0.9rem; color: var(--text-dark); transition: border 0.2s; }
+.form-control:focus, .form-select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(26,111,196,0.1); outline: none; }
+.btn-book-form { background: var(--primary); color: #fff; border: none; border-radius: 10px; padding: 12px 28px; font-weight: 600; font-size: 0.95rem; width: 100%; transition: all 0.2s; }
+.btn-book-form:hover { background: #1558a0; }
+
+/* SERVICES */
+.services-section { background: var(--bg-soft); padding: 80px 0; }
+.section-tag { font-size: 0.78rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; display: block; }
+.section-title { font-size: 2rem; font-weight: 700; color: var(--text-dark); margin-bottom: 12px; }
+.section-title span { color: var(--primary); }
+.section-sub { color: var(--text-mid); font-size: 0.97rem; max-width: 540px; }
+.service-card { background: var(--bg-white); border-radius: var(--radius); padding: 28px 24px; border: 1px solid var(--border); transition: all 0.3s; height: 100%; }
+.service-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: var(--primary); }
+.service-icon { width: 56px; height: 56px; border-radius: 14px; background: var(--primary-light); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.service-icon i { font-size: 1.4rem; color: var(--primary); }
+.service-card h5 { font-weight: 700; font-size: 1rem; color: var(--text-dark); margin-bottom: 10px; }
+.service-card p { font-size: 0.87rem; color: var(--text-mid); line-height: 1.65; margin: 0; }
+.service-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.s-tag { background: var(--primary-light); color: var(--primary); font-size: 0.72rem; font-weight: 600; padding: 4px 10px; border-radius: 50px; }
+
+/* FLEET */
+.fleet-section { background: var(--bg-white); padding: 80px 0; }
+.fleet-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px; }
+.fleet-tab { background: var(--bg-soft); border: 1.5px solid var(--border); color: var(--text-mid); border-radius: 50px; padding: 8px 20px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+.fleet-tab.active, .fleet-tab:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+.car-card { background: var(--bg-white); border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; transition: all 0.3s; }
+.car-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.car-img-wrap { background: var(--bg-soft); padding: 24px; text-align: center; }
+.car-img-wrap img { width: 100%; max-height: 160px; object-fit: contain; }
+.car-info { padding: 18px 20px; }
+.car-name { font-weight: 700; font-size: 1.05rem; color: var(--text-dark); margin-bottom: 4px; }
+.car-type-badge { background: var(--accent-light); color: #92400e; font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 50px; display: inline-block; margin-bottom: 12px; }
+.car-features { display: flex; gap: 14px; margin-bottom: 14px; flex-wrap: wrap; }
+.car-feat { font-size: 0.78rem; color: var(--text-mid); display: flex; align-items: center; gap: 4px; }
+.car-feat i { color: var(--primary); font-size: 0.8rem; }
+.car-price { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid var(--border); }
+.price-txt { font-size: 0.78rem; color: var(--text-light); }
+.price-amt { font-size: 1.1rem; font-weight: 700; color: var(--primary); }
+.btn-enquire { background: var(--primary-light); color: var(--primary); border: none; border-radius: 8px; padding: 8px 18px; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+.btn-enquire:hover { background: var(--primary); color: #fff; }
+
+/* MAHARASHTRA */
+.maharashtra-section { background: linear-gradient(135deg, #eef4fd 0%, #f8fafc 100%); padding: 80px 0; }
+.place-card { background: var(--bg-white); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); transition: all 0.3s; }
+.place-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.place-img { height: 160px; background: var(--bg-soft); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+.place-info { padding: 16px 18px; }
+.place-name { font-weight: 700; font-size: 0.95rem; color: var(--text-dark); margin-bottom: 4px; }
+.place-dist { font-size: 0.78rem; color: var(--text-light); margin-bottom: 8px; }
+.place-tag { font-size: 0.72rem; color: var(--primary); font-weight: 600; }
+
+/* HOW IT WORKS */
+.how-section { background: var(--bg-white); padding: 80px 0; }
+.step-card { text-align: center; padding: 24px 16px; }
+.step-num { width: 52px; height: 52px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; margin: 0 auto 18px; }
+.step-card h5 { font-weight: 700; font-size: 1rem; margin-bottom: 10px; }
+.step-card p { font-size: 0.87rem; color: var(--text-mid); }
+.step-line { height: 2px; background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%); flex: 1; margin-top: 26px; }
+
+/* WHY US */
+.whyus-section { background: var(--bg-soft); padding: 80px 0; }
+.why-card { background: var(--bg-white); border-radius: var(--radius); padding: 24px 22px; border: 1px solid var(--border); display: flex; gap: 16px; align-items: flex-start; transition: all 0.3s; }
+.why-card:hover { box-shadow: var(--shadow-sm); border-color: var(--primary); }
+.why-icon { width: 44px; height: 44px; min-width: 44px; border-radius: 12px; background: var(--primary-light); display: flex; align-items: center; justify-content: center; }
+.why-icon i { color: var(--primary); font-size: 1.1rem; }
+.why-card h6 { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+.why-card p { font-size: 0.83rem; color: var(--text-mid); margin: 0; }
+
+/* TESTIMONIALS */
+.testimonials-section { background: var(--bg-white); padding: 80px 0; }
+.testi-card { background: var(--bg-soft); border-radius: var(--radius); padding: 28px 24px; border: 1px solid var(--border); height: 100%; }
+.testi-stars { color: var(--accent); font-size: 0.9rem; margin-bottom: 12px; }
+.testi-text { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+.testi-author { display: flex; align-items: center; gap: 12px; }
+.testi-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
+.testi-name { font-weight: 700; font-size: 0.88rem; }
+.testi-loc { font-size: 0.75rem; color: var(--text-light); }
+
+/* CTA */
+.cta-section { background: linear-gradient(135deg, var(--primary) 0%, #1558a0 100%); padding: 70px 0; }
+.cta-section h2 { color: #fff; font-weight: 700; font-size: 2rem; margin-bottom: 14px; }
+.cta-section p { color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 30px; }
+.btn-cta-white { background: #fff; color: var(--primary); border: none; border-radius: 50px; padding: 13px 32px; font-weight: 700; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
+.btn-cta-white:hover { background: var(--accent); color: #fff; }
+.btn-cta-wa { background: #25d366; color: #fff; border: none; border-radius: 50px; padding: 13px 32px; font-weight: 700; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
+.btn-cta-wa:hover { background: #1db954; color: #fff; }
+
+/* FOOTER */
+footer { background: #0f172a; color: #cbd5e1; padding: 60px 0 28px; }
+.footer-brand { font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+.footer-brand span { color: var(--accent); }
+.footer-desc { font-size: 0.85rem; line-height: 1.7; color: #94a3b8; margin-bottom: 20px; }
+footer h6 { color: #fff; font-weight: 700; font-size: 0.9rem; margin-bottom: 18px; }
+.footer-links { list-style: none; padding: 0; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+.footer-links a:hover { color: #fff; }
+.footer-contact-item { display: flex; gap: 10px; margin-bottom: 12px; font-size: 0.85rem; color: #94a3b8; }
+.footer-contact-item i { color: var(--accent); font-size: 0.9rem; margin-top: 2px; }
+.footer-bottom { border-top: 1px solid #1e293b; margin-top: 40px; padding-top: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; font-size: 0.8rem; color: #64748b; }
+.social-links { display: flex; gap: 10px; }
+.social-links a { width: 36px; height: 36px; border-radius: 50%; background: #1e293b; color: #94a3b8; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.2s; font-size: 0.85rem; }
+.social-links a:hover { background: var(--primary); color: #fff; }
+
+/* WHATSAPP FLOAT */
+.wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 999; width: 56px; height: 56px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(37,211,102,0.4); text-decoration: none; transition: all 0.2s; }
+.wa-float:hover { background: #1db954; transform: scale(1.1); }
+.wa-float i { color: #fff; font-size: 1.5rem; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero { padding: 60px 0 40px; min-height: auto; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero-img-wrap { margin-top: 36px; }
+  .booking-card { padding: 24px 20px; }
+  .section-title { font-size: 1.6rem; }
+  .cta-section h2 { font-size: 1.5rem; }
+  .fleet-tabs { gap: 6px; }
+  .fleet-tab { padding: 6px 14px; font-size: 0.78rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">🚗 NaviMumbai<span>Cabs</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto me-3">
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#fleet">Our Fleet</a></li>
+        <li class="nav-item"><a class="nav-link" href="#places">Places</a></li>
+        <li class="nav-item"><a class="nav-link" href="#how">How It Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <a href="tel:+919876543210" class="btn-book-nav nav-link">📞 Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="hero-badge">✅ Trusted Car Rental in Navi Mumbai</div>
+        <h1>Reliable <span>Car Rental</span> & Cab Service in Navi Mumbai</h1>
+        <p>Swift, Ertiga, Dzire, Rumion, Innova & Tempo available for Airport Pickup, Mumbai Local, Mumbai Darshan, Outstation & Maharashtra Tours — 24/7 at best prices.</p>
+        <div class="hero-btns">
+          <a href="#booking" class="btn-primary-main"><i class="fas fa-car"></i> Book a Cab</a>
+          <a href="https://wa.me/919876543210" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="num">5000+</div><div class="lbl">Happy Trips</div></div>
+          <div class="hero-stat"><div class="num">10+</div><div class="lbl">Vehicles</div></div>
+          <div class="hero-stat"><div class="num">24/7</div><div class="lbl">Available</div></div>
+          <div class="hero-stat"><div class="num">All India</div><div class="lbl">Outstation</div></div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="hero-img-wrap mt-4 mt-lg-0">
+          <div class="floating-badge top-left"><div class="dot"></div> Available Now</div>
+          <div class="hero-car-card">
+            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Ertiga-Tour/9617/1762858404297/front-left-side-47.jpg?tr=w-664" alt="Maruti Ertiga Car Rental Navi Mumbai" loading="lazy">
+     <!-- <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/45691/ertiga-exterior-right-front-three-quarter-2.jpeg?isig=0&q=75" alt="Maruti Ertiga Car Rental Navi Mumbai" loading="lazy"> -->
+            <!-- https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Ertiga-Tour/9617/1762858404297/front-left-side-47.jpg?tr=w-664 -->
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div>
+                <div style="font-weight:700;font-size:1rem;">Maruti Ertiga</div>
+                <div style="font-size:0.8rem;color:var(--text-light);">7 Seater · AC · GPS</div>
+              </div>
+              <a href="https://wa.me/919876543210" class="btn-enquire">Book Now</a>
+            </div>
+          </div>
+          <div class="floating-badge bottom-right">⭐ 4.9 Rated Service</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking-section py-5" id="booking">
+  <div class="container">
+    <div class="booking-card" data-aos="fade-up">
+      <h3><span>Quick</span> Booking Form</h3>
+      <div class="row g-3">
+        <div class="col-md-3">
+          <label class="form-label">Service Type</label>
+          <select class="form-select">
+            <option>Airport Pickup / Drop</option>
+            <option>Mumbai Local</option>
+            <option>Mumbai Darshan</option>
+            <option>Outstation (All India)</option>
+            <option>Maharashtra Tour</option>
+            <option>Hourly Rental</option>
+            <option>Tempo / Carry / 407</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Pickup Location</label>
+          <input type="text" class="form-control" placeholder="Vashi, Kharghar, Belapur...">
+        </div>
+        <div class="col-md-2">
+          <label class="form-label">Pickup Date</label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="col-md-2">
+          <label class="form-label">Pickup Time</label>
+          <input type="time" class="form-control">
+        </div>
+        <div class="col-md-2 d-flex align-items-end">
+          <a href="https://wa.me/919876543210" class="btn-book-form text-center text-decoration-none" style="display:flex;align-items:center;justify-content:center;gap:8px;"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="row mb-5" data-aos="fade-up">
+      <div class="col-lg-7">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">All Our <span>Services</span></h2>
+        <p class="section-sub">From airport transfers to all-India outstation trips — we've got every journey covered with comfort and reliability.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-plane"></i></div>
+          <h5>Airport Pickup & Drop</h5>
+          <p>Reliable transfers to/from Mumbai International & Domestic airports. Flight tracking, on-time guaranteed.</p>
+          <div class="service-tags">
+            <span class="s-tag">Mumbai Airport</span>
+            <span class="s-tag">24/7</span>
+            <span class="s-tag">On-time</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-city"></i></div>
+          <h5>Mumbai Local & Darshan</h5>
+          <p>Full-day Mumbai sightseeing – Gateway of India, Marine Drive, Juhu Beach, Siddhivinayak & more covered.</p>
+          <div class="service-tags">
+            <span class="s-tag">Full Day</span>
+            <span class="s-tag">Half Day</span>
+            <span class="s-tag">Guide Optional</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-clock"></i></div>
+          <h5>Hourly Rental</h5>
+          <p>Need a cab for a few hours? Hire our cars on an hourly basis for meetings, errands or local travel.</p>
+          <div class="service-tags">
+            <span class="s-tag">4 Hours</span>
+            <span class="s-tag">8 Hours</span>
+            <span class="s-tag">Flexible</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-road"></i></div>
+          <h5>Outstation – All India</h5>
+          <p>Comfortable one-way & round trip outstation cabs to Goa, Pune, Nashik, Delhi, Shirdi & across India.</p>
+          <div class="service-tags">
+            <span class="s-tag">One Way</span>
+            <span class="s-tag">Round Trip</span>
+            <span class="s-tag">All India</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
+          <h5>Maharashtra Tours</h5>
+          <p>Explore Shirdi, Mahabaleshwar, Lonavala, Alibaug, Aurangabad, Ajanta-Ellora & all major Maharashtra destinations.</p>
+          <div class="service-tags">
+            <span class="s-tag">Shirdi</span>
+            <span class="s-tag">Mahabaleshwar</span>
+            <span class="s-tag">Lonavala</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-truck"></i></div>
+          <h5>Tempo, Carry & 407 Pickup</h5>
+          <p>Need to move goods or large groups? We offer Tempo Traveller, Maruti Carry & 407 pickup trucks.</p>
+          <div class="service-tags">
+            <span class="s-tag">Carry</span>
+            <span class="s-tag">407 Pickup</span>
+            <span class="s-tag">Cargo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLEET -->
+<section class="fleet-section" id="fleet">
+  <div class="container">
+    <div class="row mb-4" data-aos="fade-up">
+      <div class="col-lg-7">
+        <span class="section-tag">Our Vehicles</span>
+        <h2 class="section-title">Choose Your <span>Perfect Car</span></h2>
+        <p class="section-sub">Well-maintained, clean & GPS-equipped vehicles for every trip type and budget.</p>
+      </div>
+    </div>
+    <div class="fleet-tabs mb-4" data-aos="fade-up">
+      <div class="fleet-tab active">All Vehicles</div>
+      <div class="fleet-tab">Sedan</div>
+      <div class="fleet-tab">SUV / MUV</div>
+      <div class="fleet-tab">Tempo & Cargo</div>
+    </div>
+    <div class="row g-4">
+      <!-- Swift -->
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="car-card">
+          <div class="car-img-wrap">
+            <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/159019/swift-exterior-right-front-three-quarter.jpeg?isig=0&q=75" alt="Maruti Swift Car Rental Navi Mumbai" loading="lazy">
+          </div>
+          <div class="car-info">
+            <div class="car-name">Maruti Swift</div>
+            <div class="car-type-badge">Hatchback</div>
+            <div class="car-features">
+              <span class="car-feat"><i class="fas fa-user"></i> 4 Seats</span>
+              <span class="car-feat"><i class="fas fa-snowflake"></i> AC</span>
+              <span class="car-feat"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-price">
+              <div><div class="price-txt">Starting from</div><div class="price-amt">₹12/km</div></div>
+              <a href="https://wa.me/919876543210?text=I want to book Maruti Swift" class="btn-enquire">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Dzire -->
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="car-card">
+          <div class="car-img-wrap">
+            <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/54399/dzire-exterior-right-front-three-quarter-2.jpeg?isig=0&q=75" alt="Maruti Dzire Rental Navi Mumbai" loading="lazy">
+          </div>
+          <div class="car-info">
+            <div class="car-name">Maruti Dzire</div>
+            <div class="car-type-badge">Sedan</div>
+            <div class="car-features">
+              <span class="car-feat"><i class="fas fa-user"></i> 4 Seats</span>
+              <span class="car-feat"><i class="fas fa-snowflake"></i> AC</span>
+              <span class="car-feat"><i class="fas fa-gas-pump"></i> CNG/Petrol</span>
+            </div>
+            <div class="car-price">
+              <div><div class="price-txt">Starting from</div><div class="price-amt">₹13/km</div></div>
+              <a href="https://wa.me/919876543210?text=I want to book Maruti Dzire" class="btn-enquire">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Ertiga -->
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="car-card">
+          <div class="car-img-wrap">
+            <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/45691/ertiga-exterior-right-front-three-quarter-2.jpeg?isig=0&q=75" alt="Maruti Ertiga 7 Seater Rental Navi Mumbai" loading="lazy">
+          </div>
+          <div class="car-info">
+            <div class="car-name">Maruti Ertiga</div>
+            <div class="car-type-badge">7 Seater MUV</div>
+            <div class="car-features">
+              <span class="car-feat"><i class="fas fa-user"></i> 7 Seats</span>
+              <span class="car-feat"><i class="fas fa-snowflake"></i> AC</span>
+              <span class="car-feat"><i class="fas fa-gas-pump"></i> CNG</span>
+            </div>
+            <div class="car-price">
+              <div><div class="price-txt">Starting from</div><div class="price-amt">₹15/km</div></div>
+              <a href="https://wa.me/919876543210?text=I want to book Maruti Ertiga" class="btn-enquire">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Rumion -->
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="car-card">
+          <div class="car-img-wrap">
+            <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/161543/rumion-exterior-right-front-three-quarter.jpeg?isig=0&q=75" alt="Toyota Rumion Rental Navi Mumbai" loading="lazy">
+          </div>
+          <div class="car-info">
+            <div class="car-name">Toyota Rumion</div>
+            <div class="car-type-badge">7 Seater MUV</div>
+            <div class="car-features">
+              <span class="car-feat"><i class="fas fa-user"></i> 7 Seats</span>
+              <span class="car-feat"><i class="fas fa-snowflake"></i> AC</span>
+              <span class="car-feat"><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-price">
+              <div><div class="price-txt">Starting from</div><div class="price-amt">₹16/km</div></div>
+              <a href="https://wa.me/919876543210?text=I want to book Toyota Rumion" class="btn-enquire">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Carry -->
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="car-card">
+          <div class="car-img-wrap" style="background:#f1f5f9;padding:32px;text-align:center;">
+            <div style="font-size:4rem;">🚐</div>
+            <div style="font-size:0.75rem;color:var(--text-light);margin-top:8px;">Maruti Carry</div>
+          </div>
+          <div class="car-info">
+            <div class="car-name">Maruti Carry</div>
+            <div class="car-type-badge">Mini Tempo / Cargo</div>
+            <div class="car-features">
+              <span class="car-feat"><i class="fas fa-box"></i> Light Cargo</span>
+              <span class="car-feat"><i class="fas fa-users"></i> 2+1</span>
+            </div>
+            <div class="car-price">
+              <div><div class="price-txt">Starting from</div><div class="price-amt">₹14/km</div></div>
+              <a href="https://wa.me/919876543210?text=I want to book Maruti Carry" class="btn-enquire">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 407 -->
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="car-card">
+          <div class="car-img-wrap" style="background:#f1f5f9;padding:32px;text-align:center;">
+            <div style="font-size:4rem;">🚛</div>
+            <div style="font-size:0.75rem;color:var(--text-light);margin-top:8px;">407 Pickup Truck</div>
+          </div>
+          <div class="car-info">
+            <div class="car-name">407 Pickup Truck</div>
+            <div class="car-type-badge">Heavy Cargo</div>
+            <div class="car-features">
+              <span class="car-feat"><i class="fas fa-box"></i> Heavy Load</span>
+              <span class="car-feat"><i class="fas fa-road"></i> Outstation OK</span>
+            </div>
+            <div class="car-price">
+              <div><div class="price-txt">Contact for</div><div class="price-amt">Best Rate</div></div>
+              <a href="https://wa.me/919876543210?text=I want to enquire about 407 Pickup" class="btn-enquire">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAHARASHTRA PLACES -->
+<section class="maharashtra-section" id="places">
+  <div class="container">
+    <div class="row mb-5" data-aos="fade-up">
+      <div class="col-lg-8">
+        <span class="section-tag">Maharashtra Tourism</span>
+        <h2 class="section-title">Popular <span>Destinations</span> We Cover</h2>
+        <p class="section-sub">Explore the best of Maharashtra with our comfortable outstation cabs. All major tourist spots covered.</p>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="0">
+        <div class="place-card">
+          <div class="place-img">🕌</div>
+          <div class="place-info"><div class="place-name">Shirdi</div><div class="place-dist">~240 km</div><div class="place-tag">Religious</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="60">
+        <div class="place-card">
+          <div class="place-img">⛰️</div>
+          <div class="place-info"><div class="place-name">Mahabaleshwar</div><div class="place-dist">~260 km</div><div class="place-tag">Hill Station</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="120">
+        <div class="place-card">
+          <div class="place-img">🌿</div>
+          <div class="place-info"><div class="place-name">Lonavala</div><div class="place-dist">~80 km</div><div class="place-tag">Hill Station</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="180">
+        <div class="place-card">
+          <div class="place-img">🏖️</div>
+          <div class="place-info"><div class="place-name">Alibaug</div><div class="place-dist">~95 km</div><div class="place-tag">Beach</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="240">
+        <div class="place-card">
+          <div class="place-img">🏛️</div>
+          <div class="place-info"><div class="place-name">Aurangabad</div><div class="place-dist">~330 km</div><div class="place-tag">Heritage</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+        <div class="place-card">
+          <div class="place-img">🌊</div>
+          <div class="place-info"><div class="place-name">Tarkarli</div><div class="place-dist">~470 km</div><div class="place-tag">Beach</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="0">
+        <div class="place-card">
+          <div class="place-img">🌴</div>
+          <div class="place-info"><div class="place-name">Goa</div><div class="place-dist">~590 km</div><div class="place-tag">Beach State</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="60">
+        <div class="place-card">
+          <div class="place-img">🏙️</div>
+          <div class="place-info"><div class="place-name">Pune</div><div class="place-dist">~130 km</div><div class="place-tag">City Tour</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="120">
+        <div class="place-card">
+          <div class="place-img">🍇</div>
+          <div class="place-info"><div class="place-name">Nashik</div><div class="place-dist">~200 km</div><div class="place-tag">Pilgrimage</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="180">
+        <div class="place-card">
+          <div class="place-img">🌅</div>
+          <div class="place-info"><div class="place-name">Konkan</div><div class="place-dist">~200 km</div><div class="place-tag">Coastal</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="240">
+        <div class="place-card">
+          <div class="place-img">🗺️</div>
+          <div class="place-info"><div class="place-name">Ajanta-Ellora</div><div class="place-dist">~350 km</div><div class="place-tag">UNESCO</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+        <div class="place-card">
+          <div class="place-img">🦁</div>
+          <div class="place-info"><div class="place-name">Tadoba</div><div class="place-dist">~700 km</div><div class="place-tag">Wildlife</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Simple Process</span>
+      <h2 class="section-title">How It <span>Works</span></h2>
+      <p class="section-sub mx-auto">Book your ride in 3 simple steps</p>
+    </div>
+    <div class="row align-items-start" data-aos="fade-up">
+      <div class="col-md-4">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h5>Choose Your Service</h5>
+          <p>Select from airport pickup, local, outstation, Mumbai Darshan, or tempo services based on your need.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h5>Book via WhatsApp or Call</h5>
+          <p>Share your pickup details, date & time. Get instant confirmation with driver details & fare estimate.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h5>Enjoy Your Ride</h5>
+          <p>Your clean, AC car arrives on time. Sit back, relax and enjoy a comfortable, safe journey.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="whyus-section">
+  <div class="container">
+    <div class="row mb-5" data-aos="fade-up">
+      <div class="col-lg-7">
+        <span class="section-tag">Why Choose Us</span>
+        <h2 class="section-title">Navi Mumbai's <span>Most Trusted</span> Cab Service</h2>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-clock"></i></div>
+          <div><h6>24/7 Availability</h6><p>We're available round the clock, 365 days a year including holidays & festivals.</p></div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="60">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-rupee-sign"></i></div>
+          <div><h6>Best Prices, No Hidden Charges</h6><p>Transparent pricing with no surprise fees. What we quote is what you pay.</p></div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="120">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+          <div><h6>Safe & Verified Drivers</h6><p>All drivers are police verified, experienced & trained for professional service.</p></div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="180">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-car"></i></div>
+          <div><h6>Well-Maintained Clean Cars</h6><p>All vehicles are regularly serviced, sanitized & GPS-equipped for your safety.</p></div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="240">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-plane"></i></div>
+          <div><h6>Flight Tracking for Airport Transfers</h6><p>We track your flight in real-time and adjust pickup time automatically.</p></div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="why-card">
+          <div class="why-icon"><i class="fab fa-whatsapp"></i></div>
+          <div><h6>Instant WhatsApp Booking</h6><p>Book in seconds via WhatsApp. Get instant confirmation & driver details.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Customer Reviews</span>
+      <h2 class="section-title">What Our <span>Customers Say</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Excellent airport pickup service! Driver was on time, car was very clean. Booked Ertiga for family trip to Shirdi — absolutely wonderful experience."</p>
+          <div class="testi-author"><div class="testi-avatar">RK</div><div><div class="testi-name">Rahul Kadam</div><div class="testi-loc">Vashi, Navi Mumbai</div></div></div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Took Mumbai Darshan full day tour with Swift Dzire. Driver was very knowledgeable about all spots. Price was very reasonable. Highly recommend!"</p>
+          <div class="testi-author"><div class="testi-avatar">PS</div><div><div class="testi-name">Priya Sharma</div><div class="testi-loc">Kharghar, Navi Mumbai</div></div></div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Used their 407 pickup truck for goods transport. Very reliable and on-time. Good rates compared to others. Will definitely use again for outstation delivery."</p>
+          <div class="testi-author"><div class="testi-avatar">AM</div><div><div class="testi-name">Anil Mhatre</div><div class="testi-loc">Panvel, Navi Mumbai</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section text-center" id="contact">
+  <div class="container" data-aos="fade-up">
+    <h2>Ready to Book Your Ride?</h2>
+    <p>Call or WhatsApp us now for instant booking & best fares in Navi Mumbai</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="tel:+919876543210" class="btn-cta-white"><i class="fas fa-phone"></i> Call: +91 98765 43210</a>
+      <a href="https://wa.me/919876543210" target="_blank" class="btn-cta-wa"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-brand">🚗 NaviMumbai<span>Cabs</span></div>
+        <p class="footer-desc">Navi Mumbai's trusted car rental service. Offering Swift, Ertiga, Dzire, Rumion and Tempo for airport transfers, Mumbai tours, outstation & Maharashtra trips.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <h6>Services</h6>
+        <ul class="footer-links">
+          <li><a href="#">Airport Pickup & Drop</a></li>
+          <li><a href="#">Mumbai Local</a></li>
+          <li><a href="#">Mumbai Darshan</a></li>
+          <li><a href="#">Hourly Rental</a></li>
+          <li><a href="#">Outstation – All India</a></li>
+          <li><a href="#">Maharashtra Tours</a></li>
+          <li><a href="#">Tempo & 407 Pickup</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <h6>Areas We Serve</h6>
+        <ul class="footer-links">
+          <li><a href="#">Vashi</a></li>
+          <li><a href="#">Kharghar</a></li>
+          <li><a href="#">Belapur</a></li>
+          <li><a href="#">Panvel</a></li>
+          <li><a href="#">Airoli</a></li>
+          <li><a href="#">Nerul</a></li>
+          <li><a href="#">Ulwe & Dronagiri</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <h6>Contact Us</h6>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><div>+91 98765 43210</div></div>
+        <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><div>WhatsApp Booking Available</div></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><div>Navi Mumbai, Maharashtra – 400703</div></div>
+        <div class="footer-contact-item"><i class="fas fa-clock"></i><div>Available 24/7, All Days</div></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><div>booking@navimumbaicabs.in</div></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2024 NaviMumbaiCabs. All rights reserved.</div>
+      <div style="color:#64748b;font-size:0.78rem;">Car Rental Navi Mumbai | Airport Taxi | Mumbai Darshan</div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919876543210" target="_blank" class="wa-float" title="WhatsApp Booking">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "NaviMumbaiCabs",
+  "description": "Car rental and cab service in Navi Mumbai. Airport pickup, Mumbai Darshan, outstation, Maharashtra tours. Swift, Ertiga, Dzire, Tempo available.",
+  "url": "https://www.navimumbaicabs.in",
+  "telephone": "+919876543210",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Navi Mumbai",
+    "addressRegion": "Maharashtra",
+    "postalCode": "400703",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "19.0330",
+    "longitude": "73.0297"
+  },
+  "openingHours": "Mo-Su 00:00-23:59",
+  "priceRange": "₹₹",
+  "areaServed": ["Navi Mumbai", "Mumbai", "Maharashtra"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Car Rental Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Airport Pickup Drop Navi Mumbai"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mumbai Darshan Tour"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Outstation Car Rental All India"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Maharashtra Tour Package"}}
+    ]
+  }
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({ duration: 700, once: true, offset: 60 });
+
+// Fleet tab filter (visual only)
+document.querySelectorAll('.fleet-tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.fleet-tab').forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+</body>
+</html>
